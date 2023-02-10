@@ -1,26 +1,19 @@
 [project]
-name = "DAPSQL QWIK-Stack Application"
+name = "backend app"
 version = "0.0.1"
-description = "A comprehensive template to start a real-world quality project."
-authors = [
-    {name = "Aeternalis-Ingenium", email="aeternalisingenium@proton.me"},
-]
-classifiers = [
-    "Topic :: Software Development"
-]
+description = "backend app"
 
 dynamic = ["dependencies"]
-#license = {file = "LICENSE.txt"}
 readme = "README.md"
-requires-python = ">=3.11"
+requires-python = ">=3.10"
 
 [tool.setuptools.dynamic]
 dependencies = {file = ["requirements.txt"]}
 
 [project.urls]
-homepage = "https://github.com/Aeternalis-Ingenium/DAPSQL-FAQ-Stack-Template"
-documentation = "https://github.com/Aeternalis-Ingenium/DAPSQL-FAQ-Stack-Template"
-repository = "https://github.com/Aeternalis-Ingenium/DAPSQL-FAQ-Stack-Template"
+homepage = ""
+documentation = ""
+repository = ""
 
 [tool.black]
 color=true
@@ -86,7 +79,7 @@ error_summary = true
 exclude = "(build|data|dist|docs/src|images|logo|logs|output)/"
 ignore_missing_imports = true
 pretty = true
-python_version = "3.11"
+python_version = "3.10"
 strict_optional = true
 warn_no_return = true
 warn_return_any = false

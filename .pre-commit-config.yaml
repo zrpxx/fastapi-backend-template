@@ -1,16 +1,7 @@
 default_install_hook_types: [pre-commit]
 default_stages: [commit, push]
 default_language_version:
-  python: python3.11
-ci:
-    autofix_commit_msg: |
-        ci(pre-commit): Autofixing commit msg from pre-commit.com hooks
-    autofix_prs: true
-    autoupdate_branch: ''
-    autoupdate_commit_msg: 'ci(autoupdate): Autoupdating commit msg'
-    autoupdate_schedule: weekly
-    skip: []
-    submodules: false
+  python: python3.10
 repos:
 -   repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.4.0
@@ -23,7 +14,7 @@ repos:
     rev: 22.12.0
     hooks:
     -   id: black
-        language_version: python3.11
+        language_version: python3.10
         args:
         - --config=backend/pyproject.toml
 -   repo: https://github.com/pycqa/isort

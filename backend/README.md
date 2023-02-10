@@ -1,47 +1,21 @@
-<h1 align=center><strong>Backend Application 🐍</strong></h1>
-
-This backend application template consists of:
-
-* Configure the [TOML](https://toml.io/en/) file for testing and linting.
-* Create the backend server with FastAPI and Uvicorn,
-* Connect the backend app with PostgreSQL server via the asynchronous SQLAlchemy with AsyncPG driver.
-* Set up Alembic for the auto-generation of database migrations.
-* Create `Account` (domain) class as our database entity `account`.
-* Create data validation for our database entity with [Pydantic](https://pydantic-docs.helpmanual.io/).
-* Create formatters for `json` convention and `datetime`.
-* Create authorization with JWT Token generator.
-* Create hashing function generator and password generator.
-* Create custom error/exception handlers for both source code and HTTP.
-* Create dependency injections for utilizing our asynchronous session and C. R. U. D. repository class.
-* Create account specific routes: `signup`, `signin`, `get all`, `get by id`, `update by id`, and `delete by id`.
-
-**P. S. This README will walk you through the local development setup. If you prefer to run your backend app with docker, see the main README.**
-
----
-
 ## Python, VEnv, & Requirements Installation
 
 **INFO**: All related to Python will be setup **IN** and **FROM** the `backend/` directory!
 
-* Step 1 $\rightarrow$ Open your project root directory and set up your Python via `PyEnv`:
+* Step 1 $\rightarrow$ Open your project root directory and set up your Python via `conda`:
 
     ```shell
-    pyenv install 3.11.0
+    conda create -n YOUR_VENV_NAME python=3.11.0
+    ```
     ```
 
-* Step 2 $\rightarrow$ Create our virtual environment:
+* Step 2 $\rightarrow$ Activate your virtual environment:
 
     ```shell
-    pyenv virtualenv 3.11.0 YOUR_VENV_NAME
+    conda activate YOUR_VENV_NAME
     ```
 
-* Step 3 $\rightarrow$ Set the newly created virtual environment as your main Python interpreter in the root directory:
-
-    ```shell
-    pyenv local YOUR_VENV_NAME
-    ```
-
-* Step 4 $\rightarrow$ Install the initial project requirements with `pip3`:
+* Step 3 $\rightarrow$ Install the initial project requirements with `pip3`:
 
     ```shell
     pip3 install -r requirements.txt

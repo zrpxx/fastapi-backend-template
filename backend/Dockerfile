@@ -1,5 +1,5 @@
-# Pull official latest Python Docker image (Pulished with version 3.11.0)
-FROM --platform=linux/amd64 python:latest
+# Pull official 3.10 Python Docker image
+FROM --platform=linux/amd64 python:3.10-bullseye
 
 # Set the working directory
 WORKDIR /usr/backend
@@ -28,10 +28,6 @@ RUN pip3 install -r requirements.txt
 
 # Copy all files
 COPY . .
-
-# Copy entrypoint.sh for auto connection with account_db service
-COPY ./entrypoint.sh .
-RUN chmod +x /usr/backend/entrypoint.sh
 
 # Execute entrypoint.sh
 ENTRYPOINT ["/usr/backend/entrypoint.sh" ]
